@@ -1,0 +1,3 @@
+ view,text,swiper,image,scroll-view {
+    box-sizing: border-box
+}
