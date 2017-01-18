@@ -1,1 +1,27 @@
-/* page/my/my.wxss */
+.user-bg {
+    width: 100%;
+    height: 400rpx;
+    position: absolute;
+    filter: blur(30px);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.user {
+    width: 100%;
+    height: 400rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 200rpx;
+    border: 1px solid #f66;
+}
+
+.user text {}

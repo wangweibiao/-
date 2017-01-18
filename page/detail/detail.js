@@ -1,6 +1,6 @@
 import douban from '../../utils/fetch';
-// const URL = 'https://api.getweapp.com/vendor/douban/subject?id=';
-const URL = 'https://api.douban.com/v2/movie/subject/';
+const URL = 'https://api.getweapp.com/vendor/douban/subject?id=';
+// const URL = 'https://api.douban.com/v2/movie/subject/';
 
 const searchByTagUrl = 'https://api.getweapp.com/vendor/douban/search?tag=';
 Page({

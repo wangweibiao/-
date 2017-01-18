@@ -1,2 +1,9 @@
-<!--page/my/my.wxml-->
-<text>page/my/my.wxml</text>
+<view>
+    <div class="user-bg" style="background-image:url({{user.avatarUrl}})">
+        
+    </div>
+    <div class= "user">
+        <image src="{{user.avatarUrl}}"></image>
+        <text>{{user.nickName}}</text>
+    </div>
+</view>

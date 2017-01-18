@@ -78,8 +78,8 @@ Page({
     init: function() {
         var that = this;
         // var URL = "https://hello.dev/api"; //ngnix代理
-        // var URL = "https://api.getweapp.com/vendor/douban";
-        var URL = "https://api.douban.com/v2/movie";
+        var URL = "https://api.getweapp.com/vendor/douban";
+        // var URL = "https://api.douban.com/v2/movie";
 
         /** 
          * 获取系统信息 
