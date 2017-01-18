@@ -1,7 +1,10 @@
 {
   "pages": [
     "page/index/index",
-    "page/detail/detail"
+    "page/detail/detail",
+    "page/find/find",
+    "page/my/my",
+    "page/addressForm/addressForm"
     
   ],
   "window": {
@@ -21,12 +24,12 @@
       "selectedIconPath": "image/dianying_a.png",
       "text": "电影"
     },{
-      "pagePath": "page/index/index",
+      "pagePath": "page/find/find",
       "iconPath": "image/faxian.png",
       "selectedIconPath": "image/faxian_a.png",
       "text": "发现"
     }, {
-      "pagePath": "page/my/my",
+      "pagePath": "page/addressForm/addressForm",
       "iconPath": "image/wode.png",
       "selectedIconPath": "image/wode_a.png",
       "text": "我的"

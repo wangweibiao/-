@@ -1,0 +1,31 @@
+<template name="swiper">
+  <swiper-item class="swiper-theater">
+  <scroll-view scroll-x="">
+    <view class="theater-box">
+        <block wx:for="{{ list }}" wx:key="{{ item.key }}">
+          <view class="theater-item" data-id="{{item.id}}" catchtap="viewFilmDetail">
+            <image src="{{item.images.medium}}"></image>
+            <view>
+              <text class="name">{{item.title}} </text>
+              <view class="average">
+                <block wx:if="{{item.rating.average == 0}}">
+                  暂无评分
+                </block>
+                <block wx:else>
+                  {{item.rating.average}}
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{hasMore}}">
+          <view class="loading-tip">拼命加载中…</view>
+        </block>
+        <block wx:else>
+          <view class="loading-tip">没有更多内容了</view>
+        </block>
+      </view>
+  </scroll-view>
+      
+    </swiper-item>
+</template>

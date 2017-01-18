@@ -1,20 +1,46 @@
-<view class="container">
-    <block wx:if="{{showLoading}}">
-        <view  class="loading">玩命加载zh</view>
-    </block>
+<scroll-view class="container">
+    <view class="loadbox" wx:if="{{showLoading}}">
+        <loading>拼命加载中...</loading>
+    </view>
     <block wx:elif="{{showContent}}">
-        <view class="fd_hd">
-            <view class="fd_hd_bg"  style="background-image:url({{filmDetail.images.large}})"></view>
-            <image src="{{filmDetail.images.large}}" class="fd-cover"></image>
-            <view class="fd-intro">
-                <view class="fd-title">{{filmDetail.title}}</view>
-                <view class="fd-intro-txt">导演：{{filmDatil.directors[0].name}}</view>
-                <view class="fd-intro-txt">演员：
-                    <block wx:for="{{filmDatil.casts}}" wx:for-item="filmDetailCastItem"></block>
+        <view class="fd-hd">
+            <view class="fd-hd-bg" style="background-image:url({{filmDetail.images.large}})">
+                
+            </view>
+            
+            <view class="fd-top">
+                <image src="{{filmDetail.images.large}}" class="fd-cover"></image>
+                <view class="fd-intro">
+                    <view class="fd-title">{{filmDetail.title}}</view>
+                    <view class="fd-intro-txt">导演：{{filmDetail.directors[0].name}}</view>
+                    <view class="fd-intro-txt">演员：
+                        <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:key="{{index}}">
+
+                            {{filmDetailCastItem.name}}
+
+                        </block>
+                    </view>
+                    <view class="fd-intro-txt">电影评分：
+                        <block wx:if="{{filmDetail.rating.average == 0}}">
+                            暂无评分
+                        </block>
+                        <block wx:else>
+                            {{filmDetail.rating.average}}分
+                        </block>
+                    </view>
+                    <view class="fd-intro-txt">上映年份：{{filmDetail.year}}年</view>
                 </view>
             </view>
+            <view class="fd-bottom">
+                <view>{{filmDetail.collect_count}} 看过</view><view>{{filmDetail.wish_count}} 想看</view>
+            </view>
+
         </view>
         
+            <view class="summary">
+                {{filmDetail.summary}}
+            </view>
+        
+
     </block>
-    123
-</view>
+</scroll-view>

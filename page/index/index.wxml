@@ -1,9 +1,12 @@
-<block wx:if="{{showLoading}}">
-  <view class="loading">玩命加载中…</view>
-</block>
-<scroll-view lower-threshold="50" scroll-x="true" lower-threshold="50">
+<import is="swiper" src="../../component/tmpList.wxml" />
+
+<view class="loadbox" wx:if="{{showLoading}}">
+  <loading>拼命加载中...</loading>
+</view>
+
+<scroll-view wx:if="{{!showLoading}}" lower-threshold="50" scroll-x="true" lower-threshold="50">
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
@@ -14,57 +17,9 @@
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">即将上映</view>
   </view>
   <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 150}}px" bindchange="bindChange">
-    <swiper-item class="swiper-theater">
-      <view class="theater-box">
-        <block wx:for="{{ theater }}" wx:key="{{ item.key }}">
-          <view class="theater-item" data-id="{{item.id}}" catchtap="viewFilmDetail">
-            <image src="{{item.images.medium}}"></image>
-            <view>
-              <text class="name">{{item.title}} </text>
-              <view class="average">
-                <block wx:if="{{item.rating.average == 0}}">
-                  暂无评分
-                </block>
-                <block wx:else>
-                  {{item.rating.average}}
-                </block>
-              </view>
-            </view>
-          </view>
-        </block>
-        <block wx:if="{{hasMore}}">
-          <view class="loading-tip">拼命加载中…</view>
-        </block>
-        <block wx:else>
-          <view class="loading-tip">没有更多内容了</view>
-        </block>
-      </view>
-    </swiper-item>
-    <swiper-item class="swiper-theater">
-      <view class="theater-box">
-        <block wx:for="{{ coming }}" wx:key="{{ item.key }}">
-          <view class="theater-item" data-id="{{item.id}}" catchtap="viewFilmDetail">
-            <image src="{{item.images.medium}}"></image>
-            <view>
-              <text class="name">{{item.title}} </text>
-              <view class="average">
-                <block wx:if="{{item.rating.average == 0}}">
-                  暂无评分
-                </block>
-                <block wx:else>
-                  {{item.rating.average}}
-                </block>
-              </view>
-            </view>
-          </view>
-        </block>
-        <block wx:if="{{hasMore}}">
-          <view class="loading-tip">拼命加载中…</view>
-        </block>
-        <block wx:else>
-          <view class="loading-tip">没有更多内容了</view>
-        </block>
-      </view>
-    </swiper-item>
+
+    <template is="swiper" data="{{list:theater}}"></template>
+    <template is="swiper" data="{{list:coming}}"></template>
+    
   </swiper>
 </scroll-view>

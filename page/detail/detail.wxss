@@ -1,0 +1,82 @@
+    .fd-hd {
+        position: relative;
+        width: 100%;
+        height: 430rpx;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        overflow: hidden;
+        flex-direction: column;
+        padding: 10rpx 0;
+    }
+    
+    .fd-hd-bg {
+        position: absolute;
+        z-index: -2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 430rpx;
+        background-size: cover;
+        background-position: center;
+        filter: blur(40px);
+    }
+    
+    .fd-cover {
+        border: 1px solid #fff;
+        z-index: 9999;
+        width: 215rpx;
+        height: 290rpx;
+        border-radius: 8rpx;
+    }
+    
+    .fd-intro {
+        font-size: 24rpx;
+        color: #eee;
+        width: 440rpx;
+        height: 290rpx;
+        margin: 10rpx 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20rpx 0;
+    }
+    
+    .fd-title {
+        color: #fff;
+        font-size: 34rpx;
+    }
+    
+    .fd-top {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        overflow: hidden;
+    }
+    
+    .fd-bottom {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        overflow: hidden;
+        padding: 0 20rpx;
+    }
+    
+    .fd-bottom view {
+        display: inline-block;
+        font-size: 28rpx;
+        width: 330rpx;
+        height: 60rpx;
+        border-radius: 10rpx;
+        color: #fff;
+        text-align: center;
+        line-height: 60rpx;
+        background-color: rgba(255, 255, 255, 0.4)
+    }
+    
+    .summary {
+        width: 100%;
+        line-height: 42rpx;
+        font-size: 28rpx;
+        padding: 30rpx;
+    }

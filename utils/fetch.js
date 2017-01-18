@@ -4,7 +4,7 @@ var config = {
     city: '北京',
     count: 20
 }
-export default  {
+export default {
     fetchFilms: (url, city, start, count, cd) => {
         var that = this;
         if (that.data.hasMor) {
@@ -56,6 +56,7 @@ export default  {
                 "Content-Type": "application/json,application/json"
             },
             success: function(res) {
+                console.log(res.data);
                 that.setData({
                     filmDetail: res.data,
                     showLoading: false,

@@ -1,0 +1,8 @@
+<template name="loading">
+    <view class="loadbox"  wx:if="{{showLoading}}" style="height:{{winHeight}}px">
+  <view class="loading">
+     <image src="../../image/loading.gif"></image>
+  玩命加载中…
+  </view>
+</view>
+</template>>

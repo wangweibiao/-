@@ -1,93 +1,96 @@
- view,
- text,
- swiper,
- image,
- scroll-view {
-     box-sizing: border-box
- }
- 
- .banner {
-     height: 200rpx;
- }
- 
- .swiper-tab {
-     width: 100%;
-     border-bottom: 2rpx solid #777777;
-     text-align: center;
-     line-height: 80rpx;
- }
- 
- .swiper-tab-list {
-     font-size: 30rpx;
-     display: inline-block;
-     width: 50%;
-     color: #777777;
- }
- 
- .on {
-     color: #da7c0c;
-     border-bottom: 5rpx solid #da7c0c;
- }
- 
- .swiper-theater {
-     overflow-y: auto;
-     height: auto;
- }
- 
- .swiper-box {
-     display: block;
-     width: 100%;
-     height: 100%;
- }
- 
- .swiper-box view {
-     text-align: center;
- }
- 
- .slide-image {
-     width: 100%;
-     height: 100%
- }
- 
- .theater-box {
-     width: 750rpx;
-     display: flex;
-     flex-wrap: wrap;
-     padding: 20rpx 26rpx;
- }
- 
- .theater-item {
-     width: 32%;
-     height: 360rpx;
-     display: flex;
-     flex-direction: column;
-     margin: 5rpx;
- }
- 
- .theater-item image {
-     width: 100%;
-     height: 100%;
-     padding: 10rpx;
- }
- 
- .theater-item view {
-     font-size: 12px;
-     width: 100%;
-     margin-top:10rpx; 
- }
- 
- .theater-item .name {
-     color: #37a;
-     display: block;
-     overflow: hidden;
-     white-space: nowrap;
- }
- 
- .theater-item .average {
-     color: #e09015;
-     display: block;
- }
- .loading-tip {
+@charset "utf-8";
+@import "../../component/loading/loading.wxss";
+view,
+text,
+swiper,
+image,
+scroll-view {
+    box-sizing: border-box
+}
+
+.banner {
+    height: 200rpx;
+}
+
+.swiper-tab {
+    width: 100%;
+    border-bottom: 2rpx solid #777777;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+.swiper-tab-list {
+    font-size: 30rpx;
+    display: inline-block;
+    width: 50%;
+    color: #777777;
+}
+
+.on {
+    color: #da7c0c;
+    border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-theater {
+    overflow-y: auto;
+    height: auto;
+}
+
+.swiper-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-box view {
+    text-align: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%
+}
+
+.theater-box {
+    width: 750rpx;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20rpx 26rpx;
+}
+
+.theater-item {
+    width: 32%;
+    height: 360rpx;
+    display: flex;
+    flex-direction: column;
+    margin: 5rpx;
+}
+
+.theater-item image {
+    width: 100%;
+    height: 100%;
+    padding: 10rpx;
+}
+
+.theater-item view {
+    font-size: 12px;
+    width: 100%;
+    margin-top: 10rpx;
+}
+
+.theater-item .name {
+    color: #37a;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.theater-item .average {
+    color: #e09015;
+    display: block;
+}
+
+.loading-tip {
     width: 100%;
     height: 80rpx;
     line-height: 80rpx;
